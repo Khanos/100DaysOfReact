@@ -16,7 +16,8 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.todos);
+    const { todos } = this.state;
+    console.log(todos);
     return (
       <div className="App">
         <h1>This is a test</h1>
