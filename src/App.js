@@ -16,17 +16,18 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.todos);
     return (
       <div className="App">
         <h1>This is a test</h1>
-        <br/>
-        <Todos/>
-        <Todos/>
-        <Todos/>
-        <Todos/>
+        <br />
+        <Todos />
+        <Todos />
+        <Todos />
+        <Todos />
       </div>
     );
-  };
+  }
 }
 
 export default App;
