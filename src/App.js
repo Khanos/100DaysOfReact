@@ -17,15 +17,11 @@ class App extends Component {
 
   render() {
     const { todos } = this.state;
-    console.log(todos);
     return (
       <div className="App">
         <h1>This is a test</h1>
         <br />
-        <Todos />
-        <Todos />
-        <Todos />
-        <Todos />
+        <Todos todos={todos} />
       </div>
     );
   }

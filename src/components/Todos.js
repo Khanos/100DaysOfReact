@@ -1,12 +1,11 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 
 class Todos extends Component {
   render() {
-    return (
-      <div ClassName="Todos">
-        this is a test
-      </div>
-    );
+    const { todos } = this.props;
+    return todos.map((todo) => (
+      <h3>{todo.title}</h3>
+    ));
   }
 }
 
