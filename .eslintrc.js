@@ -18,6 +18,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'react/forbid-prop-types': 'off',
     'no-console': 'off',
     'linebreak-style': 'off',
     'react/prop-types': 'off',
