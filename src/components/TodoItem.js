@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const TodoItem = (props) => {
   const { todo } = props;
+  const { markComplete } = props;
   const getStyle = () => {
     const style = {
       backgroundColor: '#f4f4f4',
@@ -14,6 +15,11 @@ const TodoItem = (props) => {
     }
     return style;
   };
+
+  // const markComplete = (e) => {
+  //   console.log(e);
+  // };
+
   // const getStyle = () => ({
   //   backgroundColor: '#f4f4f4',
   //   margin: '10px',
@@ -23,6 +29,7 @@ const TodoItem = (props) => {
   return (
     <div style={getStyle()}>
       <p>
+        <input type="checkbox" style={{ marginRight: '10px' }} onChange={markComplete} />
         {todo.title}
       </p>
     </div>

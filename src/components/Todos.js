@@ -2,8 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from './TodoItem';
 
+const markComplete = (e) => {
+  console.log('Helo from parent', e);
+};
+
 const Todos = (props) => props.todos.map((todo) => (
-  <h3 key={todo.id}><TodoItem todo={todo} /></h3>
+  <h3 key={todo.id}>
+    <TodoItem todo={todo} markComplete={markComplete} />
+  </h3>
 ));
 
 // PropsType
