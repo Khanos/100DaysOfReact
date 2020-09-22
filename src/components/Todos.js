@@ -2,15 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from './TodoItem';
 
-const markComplete = (e) => {
-  console.log('Helo from parent', e);
+const Todos = (props) => {
+  const { markComplete } = props;
+  return props.todos.map((todo) => (
+    <TodoItem todo={todo} markComplete={markComplete} key={todo.id} />
+  ));
 };
-
-const Todos = (props) => props.todos.map((todo) => (
-  <h3 key={todo.id}>
-    <TodoItem todo={todo} markComplete={markComplete} />
-  </h3>
-));
 
 // PropsType
 Todos.propTypes = {
