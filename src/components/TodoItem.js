@@ -31,7 +31,7 @@ const TodoItem = (props) => {
     <div style={getStyle()}>
       <div key={id}>
         <p>
-          <input type="checkbox" style={{ marginRight: '10px' }} onChange={markComplete.bind(this, id)} />
+          <input type="checkbox" style={{ marginRight: '10px' }} onChange={() => markComplete(id)} />
           {title}
         </p>
       </div>
